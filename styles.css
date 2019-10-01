@@ -10,5 +10,5 @@ p {
 
 body { 
   background-image: url("DSC_3899.JPG");
-  background-size: contain;
+  background-size: cover;
 }
