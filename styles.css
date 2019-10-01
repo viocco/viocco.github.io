@@ -7,3 +7,7 @@ p {
   color: black;
   text-align: left;
 }
+
+body { 
+  background-image: url("bgdesert.jpg");
+}
