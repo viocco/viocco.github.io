@@ -1,14 +1,56 @@
-h1 {
-  color: black;
-  text-align: center;
-}
-
-p {
-  color: red;
-  text-align: left;
-}
-
 body { 
-  background-image: url("DSC_3899.JPG");
-  background-size: cover;
+	margin: 0;
+	background: #c0eb7c;
+	font-family: "Bookman", serif;
+	font-weight: normal;
+}
+
+header {
+	background: #ffffff;
+	width: 100%;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear:  both;
+}
+
+.container {
+	float: left;
+	display: inline-flex;
+	white-space: nowrap;
+	background: #ffffff;
+}
+
+.container h1 {
+	text-align: left;
+}
+
+nav ul {
+	float: right;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 7.5vw;
+	margin-right: 7.5vw;
+	padding-top: 35px;
+	text-transform: uppercase;
+}
+
+.container h1 {
+	padding-left: 10vw;
+}
+
+nav a:hover {
+	color: #c0eb7c;
+}
+
+nav a {
+	text-decoration: none;
+	color: #000000;
 }
