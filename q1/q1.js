@@ -547,7 +547,7 @@ function createLegend() {
 }
 
 async function loadData() {
-  stations = await d3.json("./q1/data_v1.json");
+  stations = await d3.json("q1/data_v1.json");
   for (var i = 0; i < stations.length; i++) {
     if (stations[i]['color'] == 'purple_express'){
       stations[i]['color'] = 'purple'
