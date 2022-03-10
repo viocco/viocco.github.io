@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <script src="./q0/utils.js"></script>
+    <script src="./q0/dailyRidership.js"></script>
+    <script src="./q0/weeklyRidership.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/regression/2.0.1/regression.js"></script>
+    <script src="./q0/noframework.waypoints.min.js"></script>
+    <style>
+
+
+  	</style>
+  </head>
+  <body>
+
+    <div class="image-container">
+      <div class="overlay">
+         <div class="credits-container">
+           <div class = "credits">
+             <h1>CTA<br>Ridership<br>Changes</h1>
+             <h3>due to COVID-19</h3>
+             <p>Vittorio Iocco </p>
+             <p>TK Kwon</p>
+             <p>Sheng Long</p>
+             <p>Connor Mayberry</p>
+             <p>Mara Ulloa</p>
+           </div>
+           <div class="arrow">
+             <svg transform="translate(0, 290)" width="69.109" height="83.093" fill="white" viewBox="0 0 69.109 83.093"><path d="M34.757,82.658l-.25.249L0,48.515,12.7,35.862,25.561,48.683V0H43.517V48.758L56.193,35.675,69.109,48.106l-33.9,34.986Z"></path></svg>
+           </div>
+         </div>
+       </div>
+       <div id='show_bg_2'></div>
+    </div>
+
+    <div class="svg-container">
+      <div id=preppertext class="scrolly-section">
+        <div class="scrolly-article">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h2 id=preppertext1>With the start of COVID-19, CTA "L" ridership plummeted</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="svg-container">
+        <div id=q0 class="scrolly-section">
+          <div class="scrolly-figure">
+            <svg id="ridership"></svg>
+          </div>
+
+          <div class="scrolly-article">
+            <p id="basic-waypoint"> To provide some context: <br> On <b>December 12, 2019</b>, a cluster of patients in Wuhan, Hubei Providence, China begin to experience shortness of breath and fever. <br> On <b>March 15, 2020</b>, U.S. states begin to shut down to prevent the spread of COVID-19. </p>
+            <p id="waypoint-2"></p>
+            <p>The drop was substantial, with a nearly 70% drop in average ridership from the previous years </p>
+            <p></p>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="svg-container">
+      <div id=preppertext class="scrolly-section">
+        <div class="scrolly-article">
+          <h2 id=preppertext1>But, this drop was not felt evenly...</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="svg-container">
+        <div id=q1 class="scrolly-section">
+           <!-- <br> -->
+          <div class="scrolly-figure">
+            <svg id="ridership2"></svg>
+          </div>
+
+          <div class="scrolly-article">
+            <p> </p>
+            <p id="basic-waypoint-2">Using data from the <a href="https://www.transitchicago.com/data/">CTA</a> and the <a href="https://www.census.gov/programs-surveys/acs">American Community Survey</a>, we mapped each station to the census tract that contains them, and obtained the scatterplot on the left.</p>
+            <p id="basic-waypoint-8">The general trend here, highlighted by the <b>regression line</b>, is that we see this negative correlation between median income and drop in aggregate yearly ridership between 2019 and 2020. The higher the household median income of a census tract, the bigger the drop in ridership at the station corresponding to the same census tract. <br> As shown in the graph on the right, neighborhoods with higher income had a higher percentage drop in ridership. This could be caused by a number of factors, including: 
+              <br>
+              1)  Wealthier individuals opting to take private transportation to avoid COVID-19 exposure
+              <br>
+              2) Wealthier individuals have jobs that offer flexibility in remote work compared to lower income jobs.</p>
+            <p id="basic-waypoint-3">
+              Neighborhoods with higher education levels are also positively correlated with income, and could represent the same result as shown on the left.
+            </p>
+            <p id="basic-waypoint-4">Neighborhoods with a higher percentage of white individuals are also likely to be wealthier neighborhoods, and would similarly experience a drop in ridership as seen in the earlier graphs.</p>
+
+            <p> </p>
+          </div>
+
+
+        </div>
+    </div>
+
+    <div class="svg-container">
+      <div id=preppertext class="scrolly-section">
+        <div class="scrolly-article">
+          <h2 id=preppertext1>Recovery from 2020 to 2021 has been sluggish so far...</h2>
+        </div>
+      </div>
+    </div>
+    <div class="svg-container">
+        <div id=q1 class="scrolly-section">
+           <br>
+          <div class="scrolly-figure">
+            <svg id="ridership3"></svg>
+          </div>
+
+
+          <div class="scrolly-article">
+            <p> </p>
+            <p id="basic-waypoint-5">The data in the graph on the right shows the percentage increase in ridership between 2020 and 2021. <br> As you can see, there is no clear slope to the regression, and it seems that the effects of COVID-19 are still being felt in 2021. <br> Only 74 out of 143 stations maintained or increased aggregate yearly ridership.</p>
+
+            <p id="basic-waypoint-6">Compared to 2020, 2021 has no discernable increase in ridership across groups with different education attainment.</p>
+            <p id="basic-waypoint-7">Similarly, we see no correlation between rate of recovery in aggregate ridership and percentage of white population in the neighborhood.</p>
+            <p>Although there are no general trends, we can see some patterns already -- for example, there is cluster of green line stations that continued to have decreasing ridership. </p>
+            <p> </p>
+          </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="svg-container">
+      <div id=preppertext class="scrolly-section">
+        <div class="scrolly-article">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h2 id=preppertext1>Explore the data further</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="svg-container">
+
+      Choose X variable: <select id="varSelection" class="dropdown"></select>
+      <p><br></p>
+      <div class="scrolly-figure">
+        <div class = "container" id="vis_q2">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+        <svg id="ridership4"></svg>
+        <svg id="ridership5"></svg>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </body>
+
+  <script>
+    let widthLine = 800, heightLine = 450;
+    var marginLine = { top: 20, right: 60, bottom: 40, left: 100 };
+    let svgDaily = d3.select("body").select("#ridership")
+      .attr("width", widthLine)
+      .attr("height",heightLine)
+      // .style("outline", '3px solid green')
+      .append("g").attr("transform", "translate(" + marginLine.left + "," + marginLine.top + ")");
+
+
+    // set up some typical variables for the canvas;
+		var margin = {top: 10, right: 80, bottom: 50, left: 120};
+    var width = 650 - margin.left - margin.right;
+    var height = 500 - margin.top - margin.bottom;
+
+    var svg = d3.select("body").select("#ridership2")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        // .style("outline", '2px solid red')
+      .append('g')
+        .attr("transform", `translate(${margin.left}, ${margin.top})`)
+				.attr("class", "graph");
+
+    var svg_2 = d3.select("body").select("#ridership3")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        // .style("outline", '2px solid blue')
+      .append('g')
+        .attr("transform", `translate(${margin.left}, ${margin.top})`)
+        .attr("class", "graph");
+
+    var svg_3 = d3.select("body").select("#ridership4")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        // .style("outline", '3px solid blue')
+      .append('g')
+        .attr("transform", `translate(${margin.left}, ${margin.top})`)
+        .attr("class", "graph");
+
+    var svg_4 = d3.select("body").select("#ridership5")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        // .style("outline", '3px solid blue')
+      .append('g')
+        .attr("transform", `translate( ${margin.left}, ${margin.top})`)
+        .attr("class", "graph");
+
+
+    let xVarOptions = ["Median Income", "Percent White Population", "Percent with a Bachelor's Degree"];
+    var xVar = 'medincome';
+		var xVar2 = "Median Income ($)";
+
+  </script>
+
+<script src="./q0/q0.js"></script>
+<script src="./q1/q1.js"></script>
+</html>
